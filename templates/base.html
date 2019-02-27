@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewprot' content='width=device-width, initial=scale=1.0'>
+    <meta http-equix='X-UA-Compatible' content='ie=edge'>
+    {% if title %}
+    <title>welcome to {{ title }}</title>
+    {% else %}
+    <title>welcome to Twittor</title>
+    {%endif %}
+</head>
+<body>
+    <div>Twittor: <a href='/'>Home</a></div>
+    {% block content %}{% endblock %}
+</body>
+</html>
+
