@@ -66,6 +66,13 @@ def user(username):
         }
     ]
 
+    if request.method == 'POST':
+        if request.form['request_button'] == 'Follow':
+            current_user.follow(u)
+            db.session.commit()
+        else:
+            current_user.unfollow(u)
+            db.session.commit()
     return render_template('user.html', title='Profile', posts=posts, user=u)
 
 @login_required
